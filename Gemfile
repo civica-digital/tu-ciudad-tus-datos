@@ -28,6 +28,7 @@ gem 'bourbon'
 gem 'neat', '~> 1.9.0'                                                                                                  
 gem 'bitters'                                                                                                  
 gem 'refills'
+gem 'haml'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
