@@ -1,0 +1,21 @@
+postgresql: &postgresql
+ adapter: postgresql
+ host: db
+ username: postgres
+ password:
+ pool: 5
+ timeout: 5000
+
+development:
+  <<: *postgresql
+  database: tu_ciudad_tus_datos_development
+
+test:
+  <<: *postgresql
+  database: tu_ciudad_tus_datos_test
+ 
+production:
+  <<: *postgresql
+  database: tu_ciudad_tus_datos_production
+  username: tu_ciudad_tus_datos
+  password: <%= ENV['TU-CIUDAD-TUS-DATOS_DATABASE_PASSWORD'] %>

@@ -1,0 +1,27 @@
+version: '2'
+
+volumes:
+  db_data: {}
+  gems: {}
+
+services:
+  db:
+    image: postgres:9.6
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  web: &web
+    image: civica-digital/tu-ciudad-tus-datos:development
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: rails s -p 3000 -b '0.0.0.0'
+    depends_on:
+      - db
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+      - gems:/usr/local/bundle
+    environment:
+      - RAILS_ENV=development
