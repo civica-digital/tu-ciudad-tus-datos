@@ -1,0 +1,27 @@
+footer{
+	.container{
+		border-top:1px solid rgba(#fff, .1);
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	color: rgba(#fff, .7);
+	font-size: 14px;
+	font-weight: 200;
+	overflow: hidden;
+	nav{
+		display: inline-block;
+		float: right;
+		ul li{
+			float: left;
+			a{
+				color: #fff;
+				padding: 0 20px;
+				&:hover{
+					color: #fff;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+

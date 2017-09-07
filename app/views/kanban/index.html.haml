@@ -1,1 +1,201 @@
-%span hi
+.kanban
+  %header
+    .logo
+      %h1 CONTRATOS <br>DE MI CIUDAD
+    %nav
+      %ul
+        %li=link_to 'Inicio', '#'
+        %li=link_to 'Tableros por país', '#'
+        %li=link_to 'Únete', '#'
+        %li=link_to 'Iniciar Sesión', '#'
+  %hgroup
+    %h1 Contratos por Delegación: Álvaro Obregón
+    %p Lista de Contratos del 2017 asignados a la delegación Álvaro Obregón en la Ciudad de México
+  %section.filters
+    .block
+      %span.custom-dropdown
+        %label Delegación:
+        %select
+          %option Álvaro Obregón
+      %span.custom-dropdown
+        %label Nivel de gobierno:
+        %select
+          %option Federal
+      %span.search
+        %input{placeholder: 'Buscar...'}
+    / .block
+    /   Status
+    /   %input{type: 'radio'} A tiempo
+    /   %input{type: 'radio'} Retrasado
+  %section.panels
+    .panel
+      .header
+        %h3 Planeación
+        %small $1,200,330 - 1 proyecto
+      .content
+        .card
+          %h4 Proyecto1
+          %span.tag
+            A tiempo
+          %dl
+            %dt Asignado a:
+            %dd Sin asignar
+            %dt Fecha límite:
+            %dd 22 de agosto, 2018
+            %dt Cantidad:
+            %dd $1,200,330
+          .more
+            .vote
+              .like
+                =image_tag('icons/like.svg')
+                100
+              .dislike
+                =image_tag('icons/dislike.svg')
+                24
+            .owner
+              CD
+            .update
+              =image_tag('icons/chart.svg')
+
+    .panel
+      .header
+        %h3 Licitación
+        %small $1,200,330 - 2 proyectos
+      .content
+        .card
+          %h4 Proyecto1
+          %span.tag
+            A tiempo
+          %dl
+            %dt Asignado a:
+            %dd Sin asignar
+            %dt Fecha límite:
+            %dd 22 de agosto, 2018
+            %dt Cantidad:
+            %dd $1,200,330
+          .more
+            .vote
+              .like
+                =image_tag('icons/like.svg')
+                100
+              .dislike
+                =image_tag('icons/dislike.svg')
+                24
+            .owner
+              CD
+            .update
+              =image_tag('icons/chart.svg')
+          .action
+            =link_to 'Convocatoria', '#'
+        .card
+          %h4 Proyecto1
+          %span.tag
+            A tiempo
+          %dl
+            %dt Asignado a:
+            %dd Sin asignar
+            %dt Fecha límite:
+            %dd 22 de agosto, 2018
+            %dt Cantidad:
+            %dd $1,200,330
+          .more
+            .vote
+              .like
+                =image_tag('icons/like.svg')
+                100
+              .dislike
+                =image_tag('icons/dislike.svg')
+                24
+            .owner
+              CD
+            .update
+              =image_tag('icons/chart.svg')
+          .action
+            =link_to 'Convocatoria', '#'
+    .panel
+      .header
+        %h3 Concesión
+        %small $1,200,330 - 1 proyecto
+      .content
+        .card
+          %h4 Proyecto1
+          %span.tag
+            A tiempo
+          %dl
+            %dt Asignado a:
+            %dd Sin asignar
+            %dt Fecha límite:
+            %dd 22 de agosto, 2018
+            %dt Cantidad:
+            %dd $1,200,330
+          .more
+            .vote
+              .like
+                =image_tag('icons/like.svg')
+                100
+              .dislike
+                =image_tag('icons/dislike.svg')
+                24
+            .owner
+              CD
+            .update
+              =image_tag('icons/chart.svg')
+          .action
+            =link_to 'Aplicar a convocatoria', '#'
+    .panel
+      .header
+        %h3 Contrato
+        %small $1,200,330 - 1 proyecto
+      .content
+        .card
+          %h4 Proyecto1
+          %span.tag
+            A tiempo
+          %dl
+            %dt Asignado a:
+            %dd Sin asignar
+            %dt Fecha límite:
+            %dd 22 de agosto, 2018
+            %dt Cantidad:
+            %dd $1,200,330
+          .more
+            .vote
+              .like
+                =image_tag('icons/like.svg')
+                100
+              .dislike
+                =image_tag('icons/dislike.svg')
+                24
+            .owner
+              CD
+            .update
+              =image_tag('icons/chart.svg')
+    .panel
+      .header
+        %h3 Implementación
+        %small $1,200,330 - 1 proyecto
+      .content
+        .card
+          %h4 Proyecto1
+          %span.tag
+            A tiempo
+          %dl
+            %dt Asignado a:
+            %dd Sin asignar
+            %dt Fecha límite:
+            %dd 22 de agosto, 2018
+            %dt Cantidad:
+            %dd $1,200,330
+          .more
+            .vote
+              .like
+                =image_tag('icons/like.svg')
+                100
+              .dislike
+                =image_tag('icons/dislike.svg')
+                24
+            .owner
+              CD
+            .update
+              =image_tag('icons/chart.svg')
+
