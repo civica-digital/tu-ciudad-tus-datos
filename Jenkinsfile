@@ -18,16 +18,16 @@ pipeline {
         sh 'make prepare'
       }
     }
-    stage('Test') {
-      steps {
-        sh 'make test'
-      }
-    }
-    stage('Analyze') {
-      steps {
-        sh 'make analyze'
-      }
-    }
+    // stage('Test') {
+    //   steps {
+    //     sh 'make test'
+    //   }
+    // }
+    // stage('Analyze') {
+    //   steps {
+    //     sh 'make analyze'
+    //   }
+    // }
     stage('Deploy') {
       when {
         branch 'master'
@@ -36,10 +36,10 @@ pipeline {
         sh 'make deploy'
       }
     }
-    stage('Clean') {
-      steps {
-        sh 'make clean'
-      }
+  }
+  post {
+    always {
+      sh 'make clean'
     }
   }
 }
