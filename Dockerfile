@@ -1,28 +1,46 @@
-FROM ruby:2.4.0
+FROM ruby:2.4.1-alpine
 
-RUN apt-get update -qq && apt-get install -y \
-  build-essential \
-  libpq-dev \
-  nodejs \ 
-  qt5-default \
-  libqt5webkit5-dev \
-  gstreamer1.0-plugins-base \
-  gstreamer1.0-tools \
-  gstreamer1.0-x
+# Runtime
+ENV APP_HOME=/usr/src/app \
+    LANG=C.UTF-8 \
+    PAGER='busybox less' \
+    TERM='xterm-256color' \
+    RAILS_ENV=production
 
-RUN ln -s /usr/bin/nodejs /usr/bin/node
+WORKDIR $APP_HOME
 
-RUN mkdir /app
-WORKDIR /app
+EXPOSE 3000
 
-COPY Gemfile* /app/
+CMD rm -f tmp/pids/server.pid && rails server -b 0.0.0.0
 
-ENV RAILS_ENV production
-ENV NODE_ENV production
+STOPSIGNAL SIGKILL
 
-RUN bundle install --deployment --without test development
+RUN set -ex \
+    && apk update \
+    && apk upgrade \
+    && apk add --no-cache --virtual .runtime \
+      tzdata \
+      postgresql-dev \
+      nodejs
 
-COPY . /app
+# Build
+COPY Gemfile* $APP_HOME/
 
-RUN SECRET_KEY_BASE='jibberjabber' \
-    rake assets:precompile
+RUN set -ex \
+    && apk add --no-cache --virtual .build \
+      ruby-dev \
+      build-base \
+      git \
+    && bundle install --without test development --jobs 4 --retry 3 \
+    && apk del .build
+
+COPY . $APP_HOME
+
+RUN rake assets:precompile
+
+RUN chown -R nobody:nogroup $APP_HOME
+USER nobody
+
+# Add Git release hash
+ARG release_commit=none
+ENV RELEASE_COMMIT $release_commit

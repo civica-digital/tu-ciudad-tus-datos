@@ -24,11 +24,15 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-gem 'bourbon'                                                                                                  
-gem 'neat', '~> 1.9.0'                                                                                                  
-gem 'bitters'                                                                                                  
+gem 'bourbon'
+gem 'neat', '~> 1.9.0'
+gem 'bitters'
 gem 'refills'
 gem 'haml'
+
+gem 'health_check'
+gem 'rollbar'
+gem 'newrelic_rpm'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -36,6 +40,15 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'rspec-rails'
+
+  # Analyze
+  gem 'brakeman', require: false
+  gem 'bundler-audit', require: false
+  gem 'rails_best_practices', require: false
+  gem 'reek', require: false
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
 end
 
 group :development do
