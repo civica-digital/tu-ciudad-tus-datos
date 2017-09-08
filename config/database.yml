@@ -1,21 +1,21 @@
-postgresql: &postgresql
- adapter: postgresql
- host: db
- username: postgres
- password:
- pool: 5
- timeout: 5000
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  host: <%= ENV.fetch('DATABASE_HOST') { 'localhost' } %>
+  username: <%= ENV.fetch('DATABASE_USERNAME') { 'postgres' } %>
+  password: <%= ENV.fetch('DATABASE_PASSWORD') { '' } %>
 
 development:
-  <<: *postgresql
-  database: tu_ciudad_tus_datos_development
+  <<: *default
+  database: tu-ciudad-tus-datos_development
 
 test:
-  <<: *postgresql
-  database: tu_ciudad_tus_datos_test
- 
-production:
-  <<: *postgresql
-  database: tu_ciudad_tus_datos_production
-  username: tu_ciudad_tus_datos
-  password: <%= ENV['TU-CIUDAD-TUS-DATOS_DATABASE_PASSWORD'] %>
+  <<: *default
+  database: tu-ciudad-tus-datos_test
+
+production: &production
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  database_url: <%= ENV.fetch('DATABASE_URL') { '' } %>

@@ -1,23 +1,37 @@
-FROM ruby:2.4.0
+FROM ruby:2.4.1-alpine
 
-RUN apt-get update -qq && apt-get install -y \
-  build-essential \
-  less \
-  libpq-dev \
-  nodejs \
-  qt5-default \
-  libqt5webkit5-dev \
-  gstreamer1.0-plugins-base \
-  gstreamer1.0-tools \
-  gstreamer1.0-x \
-  xvfb
+# Runtime
+ENV APP_HOME=/usr/src/app \
+    LANG=C.UTF-8 \
+    PAGER='busybox less' \
+    PATH=/usr/src/app/bin:$PATH \
+    TERM='xterm-256color' \
+    RAILS_ENV=development
 
-RUN ln -s /usr/bin/nodejs /usr/bin/node
+WORKDIR $APP_HOME
 
-ENV SHELL /bin/bash
+EXPOSE 3000
 
-RUN mkdir /app
-WORKDIR /app
+CMD rm -f tmp/pids/server.pid && rails server -b 0.0.0.0
 
-COPY Gemfile* /app/
-RUN bundle install
+STOPSIGNAL SIGKILL
+
+RUN set -ex \
+    && apk update \
+    && apk upgrade \
+    && apk add --no-cache --virtual .runtime \
+      tzdata \
+      postgresql-dev \
+      nodejs \
+      bash
+
+# Build
+RUN set -ex \
+    && apk add --no-cache --virtual .build \
+      ruby-dev \
+      build-base \
+      git
+
+# Gems
+COPY Gemfile* $APP_HOME/
+RUN bundle install --jobs 4 --retry 3

@@ -7,9 +7,13 @@ Dockerfile*
 docker-compose*
 .dockerignore
 
+# Deploy
+deploy/
+
 # Logfiles and tempfiles.
-log/*.log
-tmp/
+log/*
+tmp/*
+shared/
 
 # Documentation
 README*
@@ -19,3 +23,11 @@ doc/
 public/system/
 public/assets/
 public/uploads/
+
+# Rails
+.bundle/
+
+# Utils
+Makefile
+Jenkinsfile
+tags

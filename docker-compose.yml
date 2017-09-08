@@ -1,8 +1,7 @@
-version: '2'
+version: '3'
 
 volumes:
   db_data: {}
-  gems: {}
 
 services:
   db:
@@ -15,13 +14,19 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    command: rails s -p 3000 -b '0.0.0.0'
     depends_on:
       - db
-    ports:
-      - 3000:3000
     volumes:
-      - .:/app
-      - gems:/usr/local/bundle
+      - .:/usr/src/app
     environment:
-      - RAILS_ENV=development
+      - DATABASE_HOST=db
+      - DATABASE_PASSWORD=
+      - DATABASE_USERNAME=postgres
+      - SPRING_PIDFILE=tmp/spring.pid
+      - SPRING_SOCKET=tmp/spring.sock
+      - SPRING_TMP_PATH=tmp
+
+  spring:
+    <<: *web
+    command: spring server
+    restart: unless-stopped
