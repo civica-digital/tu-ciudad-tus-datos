@@ -1,0 +1,21 @@
+.flex-container{
+  display: flex;
+  align-items: flex-stretch;
+  .container-left{
+    flex-basis:30%;
+  }
+  .container-right{
+    flex-basis:70%;
+  }
+  @media (min-width: 320px) and (max-width: 759px){
+    display: block;
+    .container-left{
+      overflow: hidden;
+      width: 100%;
+    }
+    .container-right{
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+}

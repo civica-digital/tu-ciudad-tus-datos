@@ -1,0 +1,124 @@
+.panels{
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  width: 1360px;
+  margin: 0 auto;
+  .panel{
+    flex-basis: 240px;
+    align-items: stretch;
+    background-color: rgba(#fff, .1);
+    float: left;
+    margin-right: 40px;
+    border-radius: 5px;
+    overflow: hidden;
+    &:last-child{
+      margin-right: 0;
+    }
+    .header{
+      background-color: $main;
+      color: $dark-gray;
+      padding: 10px 15px 10px 15px;
+      h3{
+
+      }
+      small{
+        line-height: 14px;
+        display: block;
+        letter-spacing: .5pt;
+      }
+    }
+    .content{
+      padding: 15px;
+      .card{
+        padding: 15px;
+        background-color: rgba(#fff, .1);
+        border-radius: 4px;
+        font-size: 12px;
+        letter-spacing: .3pt;
+        h4{
+          color: $main;
+          display: inline-block;
+        }
+        .tag{
+          display: inline-block;
+          background-color: $main;
+          color: $dark-gray;
+          padding: 0 5px;
+          border-radius: 2px;
+          float: right;
+          font-weight: 400;
+        }
+        dl{
+          overflow: hidden;
+          dt{
+            display: inline-block;
+            font-weight: 500;
+            float: left;
+            padding-right: 5px;
+            clear: left;
+          }
+          dd{
+            font-weight: 300;
+            display: inline-block;
+            -webkit-margin-start:0;
+            float: left;
+            clear: right;
+          }
+        }
+        .more{
+          overflow: hidden;
+          .vote{
+            line-height: 20px;
+            display: inline-block;
+            float: left;
+            img{
+              width: 20px;
+              float: left;
+              padding-right: 5px;
+            }
+            .like{
+              display: inline-block;
+              color: $main;
+              padding: 0 5px;
+            }
+            .dislike{
+              display: inline-block;
+              color: $second;
+            }
+          }
+          .update{
+            width: 20px;
+            padding-top: 2px;
+            float: right;
+            display: inline-block;
+          }
+          .owner{
+            float: right;
+            display: inline-block;
+            padding: 0 4px;
+            background-color: rgba($dark-gray, .5);
+            color: $main;
+            border-radius: 2px;
+          }
+        }
+        .action{
+          text-align: center;
+          padding-top: 15px;
+          a{
+            display: inline-block;
+            background-color: $main;
+            color: $dark-gray;
+            border-radius: 13px;
+            padding: 2px 12px;
+            font-weight: 500;
+          }
+        }
+      }
+      .card + .card{
+        margin-top: 15px;
+      }
+    }
+  }
+}
