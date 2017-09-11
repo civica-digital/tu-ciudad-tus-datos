@@ -21,6 +21,7 @@ El MVP engloba la visualización del tablero tipo Kanban con tarjetas por contra
 
 ## Fechas importantes
 Primer avance: 12 de septiembre
+
 Entrega final: 22 de Septiembre
 
 ## Como iniciar
