@@ -3,6 +3,7 @@
 #### Table of Contents
 - [Ligas de interés](#ligas-de-interés)
 - [Descripción](#descripción)
+- [Fechas importantes](#fechas-importantes)
 - [Como iniciar](#como-iniciar)
 - [Información de contacto](#información-contacto)
 - [Licencia](#licencia)
@@ -17,6 +18,10 @@ Tu ciudad tus datos es un proyecto que nace de haber ganado la convocatoria hom�
 
 Dado que el tiempo de entrega fue corto, este desarrollo comprende el MVP únicamente. 
 El MVP engloba la visualización del tablero tipo Kanban con tarjetas por contrato, un nivel de detalle por contrato y su búsqueda por palabras clave. La integración dinámica de las APIs en la solución permitirá ver los contratos en las etapas correspondientes al estándar del Open Contracting.
+
+## Fechas importantes
+Primer avance: 12 de septiembre
+Entrega final: 22 de Septiembre
 
 ## Como iniciar
 
