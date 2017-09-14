@@ -28,15 +28,24 @@
         display: block;
         letter-spacing: .5pt;
       }
+      .action{
+        width: 19px;
+        height: 40px;
+        float: right;
+        a{
+          display: block;
+        }
+      }
     }
     .content{
-      padding: 15px;
+      padding: 0 15px 15px 15px;
       .card{
         padding: 15px;
         background-color: rgba(#fff, .1);
         border-radius: 4px;
         font-size: 12px;
         letter-spacing: .3pt;
+        margin-top:15px;
         h4{
           color: $main;
           display: inline-block;
@@ -115,9 +124,6 @@
             font-weight: 500;
           }
         }
-      }
-      .card + .card{
-        margin-top: 15px;
       }
     }
   }

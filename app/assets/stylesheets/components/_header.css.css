@@ -2,7 +2,10 @@ header {
   display: flex;
   align-items: flex-stretch; }
   header .logo {
-    flex-basis: 30%; }
+    flex-basis: 30%;
+    padding-top: 10px; }
+    header .logo img {
+      width: 240px; }
   header nav {
     flex-basis: 70%; }
     header nav ul {

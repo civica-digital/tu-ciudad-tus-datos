@@ -1,0 +1,117 @@
+.modal-info {
+  .tag{
+    display: inline-block;
+    background-color: $main;
+    color: $dark-gray;
+    padding: 0 5px;
+    border-radius: 2px;
+    float: right;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  dl{
+    overflow: hidden;
+    margin: 0;
+    dt{
+      display: inline-block;
+      font-weight: 500;
+      float: left;
+      padding: 5px;
+      clear: left;
+    }
+    dd{
+      font-weight: 300;
+      display: inline-block;
+      -webkit-margin-start:0;
+      float: left;
+      clear: right;
+      padding: 5px;
+    }
+  }
+  .more{
+    overflow: hidden;
+    width: 90px;
+    float: right;
+    text-align: center;
+    hr{
+      margin:10px 30px;
+    }
+    .vote{
+      line-height: 20px;
+      display: inline-block;
+      font-size: 14px;
+      padding-top: 10px;
+      img{
+        width: 20px;
+        float: left;
+        padding-right: 5px;
+      }
+      .like{
+        display: inline-block;
+        color: $main;
+        padding: 0 5px;
+      }
+      .dislike{
+        display: inline-block;
+        color: $second;
+      }
+    }
+    .update{
+      width: 20px;
+      padding-top: 2px;
+      float: right;
+      display: inline-block;
+    }
+    .owner{
+      display: inline-block;
+      padding: 0 5px;
+      border: 1px solid rgba($dark-gray, .5);
+      border-radius: 2px;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+  }
+  .description{
+    padding-top: 20px;
+    h3{
+      padding-left: 20px;
+      margin-bottom: 10px;
+      background: url('icons/step.svg') left no-repeat;
+    }
+  }
+  .comments{
+    padding-top: 20px;
+    h3{
+      padding-left: 20px;
+      margin-bottom: 10px;
+      background: url('icons/comment.svg') left no-repeat;
+    }
+    .comment{
+      font-weight:300;
+      .date{
+        color: #999;
+        font-size: 14px;
+      }
+    }
+    form{
+      margin-top: 20px;
+    }
+    textarea{
+      border: 1px solid $light-gray;
+      height: 50px;
+      padding: 5px 10px;
+      width: 100%;
+      border-radius: 5px;
+    }
+    input[type=submit]{
+      display: inline-block;
+      background-color: $main;
+      color: $dark-gray;
+      border-radius: 13px;
+      padding: 2px 12px;
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+}
