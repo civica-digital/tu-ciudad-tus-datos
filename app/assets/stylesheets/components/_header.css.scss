@@ -4,6 +4,10 @@ header{
   align-items: flex-stretch;
   .logo{
     flex-basis:30%;
+    padding-top: 10px;
+    img{
+      width: 240px;
+    }
   }
   nav{
     flex-basis:70%;

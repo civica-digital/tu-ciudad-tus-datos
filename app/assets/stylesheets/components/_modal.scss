@@ -1,0 +1,108 @@
+.modal {
+
+  .modal-state {
+    display: none;
+  }
+  label {
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+
+  label img {
+    display: block;
+  }
+
+
+  .modal-fade-screen { // overlay
+    @include position(fixed, 0);
+    background-color: rgba($medium-gray, .8);
+    opacity: 0;
+    padding-top: 0.6em;
+    text-align: left;
+    transition: opacity 0.25s ease;
+    visibility: hidden;
+    z-index: 99999999999;
+
+
+    .modal-bg {
+      @include position(absolute, 0);
+      cursor: pointer;
+    }
+  }
+
+  .modal-close {
+    @include position(absolute, 5px 20px  null null);
+    cursor: pointer;
+
+    &::after {
+      @include position(absolute, 3px 3px 0 50%);
+      content: "+";
+      display: block;
+      margin: -3px 0 0 -1px;
+      transform: rotate(45deg);
+      font-size: 40px;
+      font-weight: 300;
+      color: $main;
+    }
+
+    &:hover::after,
+    &:hover::before {
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .modal-inner {
+    background: #fff;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 0;
+    max-height: 95%;
+    overflow: auto;
+    padding: 0px;
+    position: relative;
+    transition: opacity 0.25s ease;
+    width: 95%;
+    max-width:600px;
+
+
+    .header{
+      background-color: $dark-gray;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .modal-content {
+      color: $base-font-color;
+      padding: 30px;
+    }
+
+    a.cta {
+      display: inline-block;
+      margin-right: 0.5em;
+      margin-top: 1em;
+
+      &:last-child {
+        padding: 0 2em;
+      }
+    }
+  }
+
+  .modal-state:checked + .modal-fade-screen {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-state:checked + .modal-fade-screen .modal-inner {
+    top: 0.5em;
+  }
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+// Based on code by Kasper Mikiewicz
