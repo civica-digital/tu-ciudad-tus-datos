@@ -2,65 +2,64 @@
  ([EN ESPAÑOL](/LEEME.md))
 
 ## Indice
-  - [Descripción](#descripci%C3%B3n)
-  - [Como iniciar](#como-iniciar)
-    + [Desarrollo con Docker](#desarrollo-con-docker)
-    + [Desarrollo](#desarrollo)
-  - [Fechas importantes](#fechas-importantes)
-  - [¿Problemas?](#problemas)
-  - [Ligas de interés](#ligas-de-inter%C3%A9s)
-  - [Licencia de uso](#licencia-de-uso)
-  
----
+  - [Description](#description)
+  - [How to start](#how-to-start)
+    + [Development with Docker](#development-with-docker)
+    + [Development](#development)
+  - [Release dates](#release-dates)
+  - [Problems?](#problems)
+  - [Links](#links)
+  - [License](#license)
 
-## Descripción
-Tu ciudad tus datos es un proyecto que nace de haber ganado la convocatoria homóloga realizada por Transparencia Mexicana, Open contracting partnership, entre otras organizaciones. El objetivo del proyecto es el uso de las [APIs de Contrataciones abiertas de la Ciudad de México](http://www.contratosabiertos.cdmx.gob.mx/datos-abiertos) para una visualización de la información que permita al usuario saber el estatus de los proyectos de manera amigable y sencilla. 
+## Description
+**Tu ciudad tus datos** is a project that is born of having won the homologous call made by Transparencia Mexicana, Open contracting partnership, among other organizations. The objective of the project is the use of the [API's of Contrataciones Abiertas de la Ciudad de Mexico] (http://www.contratosabiertos.cdmx.gob.mx/datos-abiertos) for a visualization of the information that allows the user to know the status of the projects in a friendly and simple way.
 
-Dado que el tiempo de entrega fue corto, este desarrollo comprende el MVP únicamente. 
-El MVP engloba la visualización del tablero tipo Kanban con tarjetas por contrato, un nivel de detalle por contrato y su búsqueda por palabras clave. La integración dinámica de las APIs en la solución permitirá ver los contratos en las etapas correspondientes al estándar del Open Contracting.
+Since the delivery time was short, this development comprises the MVP only.
+The MVP encompasses the visualization of the Kanban board with contract cards, a level of detail per contract and its search by keywords. The dynamic integration of the APIs into the solution will allow you to view contracts in the stages corresponding to the Open Contracting Standard.
 
-## Como iniciar
-Clonar el repositorio:
+## How to start
+Clone the repository:
 ```
 $ git clone git@github.com:civica-digital/tu-ciudad-tus-datos.git
 ```
 
-### Desarrollo con Docker
-Para poder iniciar el proyecto en dev con Docker:
+### Development with Docker
+To init the project:
 ```
 $ make dev
 ```
 
-### Desarrollo
-Instalamos y actualizamos las gemas:
+### Development
+Installing and updating gems:
 ```
 $ bundle install
 ```
-Creamos las migraciones de la base de datos:
+Creating migrations
 ```
 $ rake db:setup
 ```
-Iniciamos el servidor:
+Starting server:
 ```
 $ rails s
 ```
 
-## Fechas importantes
-Primer avance: 12 de Septiembre
+## Release dates
+First delivery: September 12
 
-Entrega final: 26 de Septiembre
+Final delivery: September 26
 
-## ¿Problemas?
-Mantenemos la conversación del proyecto en nuestra página de problemas  [issues](https://github.com/civica-digital/tu-ciudad-tus-datos/issues). Si usted tiene cualquier otra pregunta, nos puede contactar por correo a <equipo@civica.digital>.
+## Problems?
+We keep the project conversation on our issues page (https://github.com/civica-digital/tu-ciudad-tus-datos/issues). If you have any other questions, you can contact us by mail to <equipo@civica.digital>.
 
-## Ligas de interés
+## Links
 * [Staging](https://tu-ciudad-tus-datos.civicadesarrolla.me/kanban)
 * [Invision](https://invis.io/ZVCQS3XHY)
-* [API de Contrataciones](http://www.contratosabiertos.cdmx.gob.mx/datos-abiertos)
+* [Open Data API](http://www.contratosabiertos.cdmx.gob.mx/datos-abiertos)
 
-**NOTA:** Aquí puedes ver una [Guia de como instalar RoR](http://rubyonrails.org.es/instala.html).
+**NOTE:** [How to Install Ruby on Rails](http://rubyonrails.org.es/instala.html).
 
-## Licencia de uso
-Licencia: Apache License, Version 2.0 [Lee la documentación](http://www.apache.org/licenses/LICENSE-2.0) para más información.
-​
-Creado por [Cívica Digital](http://www.civica.digital), 2017-2018.
+## License
+
+License: Apache License, Version 2.0 [Read the documentation](http://www.apache.org/licenses/LICENSE-2.0) for more information.
+
+###### Created by [Cívica Digital](http://www.civica.digital), 2017-2018.
