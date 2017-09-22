@@ -11,8 +11,6 @@
   - [Links](#links)
   - [License](#license)
 
----
-
 ## Description
 **Tu ciudad tus datos** is a project that is born of having won the homologous call made by Transparencia Mexicana, Open contracting partnership, among other organizations. The objective of the project is the use of the [API's of Contrataciones Abiertas de la Ciudad de Mexico] (http://www.contratosabiertos.cdmx.gob.mx/datos-abiertos) for a visualization of the information that allows the user to know the status of the projects in a friendly and simple way.
 
@@ -32,7 +30,7 @@ $ make dev
 ```
 
 ### Development
-Installing and updateing the gems:
+Installing and updating gems:
 ```
 $ bundle install
 ```
@@ -63,5 +61,5 @@ We keep the project conversation on our issues page (https://github.com/civica-d
 ## License
 
 License: Apache License, Version 2.0 [Read the documentation](http://www.apache.org/licenses/LICENSE-2.0) for more information.
-​
+
 ###### Created by [Cívica Digital](http://www.civica.digital), 2017-2018.
