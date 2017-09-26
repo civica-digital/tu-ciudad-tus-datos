@@ -1,7 +1,7 @@
 # Tu ciudad tus datos
  ([EN ESPAÑOL](/LEEME.md))
 
-## Indice
+## Index
   - [Description](#description)
   - [How to start](#how-to-start)
     + [Development with Docker](#development-with-docker)
@@ -12,7 +12,7 @@
   - [License](#license)
 
 ## Description
-**Tu ciudad tus datos** is a project that is born of having won the homologous call made by Transparencia Mexicana, Open contracting partnership, among other organizations. The objective of the project is the use of the [API's of Contrataciones Abiertas de la Ciudad de Mexico] (http://www.contratosabiertos.cdmx.gob.mx/datos-abiertos) for a visualization of the information that allows the user to know the status of the projects in a friendly and simple way.
+**Tu ciudad tus datos** is a project that was born as a result of the award from the homologous call made by Transparencia Mexicana and Open contracting partnership, among other organizations. The objective of the project is the implementation of the [API's of Contrataciones Abiertas de la Ciudad de Mexico](http://www.contratosabiertos.cdmx.gob.mx/datos-abiertos) for a visualization of the information that allows the user to know the status of the projects in a friendly and simple way.
 
 Since the delivery time was short, this development comprises the MVP only.
 The MVP encompasses the visualization of the Kanban board with contract cards, a level of detail per contract and its search by keywords. The dynamic integration of the APIs into the solution will allow you to view contracts in the stages corresponding to the Open Contracting Standard.
